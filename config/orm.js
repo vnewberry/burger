@@ -39,12 +39,12 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function (table, col, val, cb) {
-    var queryString = "INSERT INTO ??";
-    queryString += col.toString();
-    queryString += ") ";
-  },
-  updateOne: function () {},
+//   insertOne: function (table, col, val, cb) {
+//     var queryString = "INSERT INTO ??";
+//     queryString += col.toString();
+//     queryString += ") ";
+//   },
+//   updateOne: function () {},
 };
 
 module.exports = orm;

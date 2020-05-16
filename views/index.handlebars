@@ -1,0 +1,81 @@
+<div class="container">
+  <!--Jumbotron-->
+  <div class="jumbotron text-center  ">
+    <h1 class="display-4" id="app-title">Eat the Burger AT <img src="public\assets\img\brand.png" ></h1>
+ 
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card border ">
+        <div class="card-header  text-white">
+         BURGER MAKER
+        </div>
+        <!--Create/add burger form-->
+        <div class="card-body">
+          <form class="create-form">
+            <div class="form-group">
+              <label for="burger">Input your desired burger here:</label>
+              <input type="text" class="form-control" id="new-burger" placeholder="">
+            </div>
+            <button class="btn " type="submit">Place order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mt-4">
+    <div class="col-md-6 mt-4">
+      <div class="card border ">
+        <div class="card-header  text-white">
+         Burgers
+        </div>
+        <!--Div to hold burgers that have not been devoured yet-->
+        <div class="card-body">
+              {{#each burgers}}
+                {{#unless devoured}}
+                  {{> burgers/burger-block devour=false}}
+                {{/unless}}
+              {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-4">
+      <div class="card devoured-card">
+        <div class="card-header text-white" id="devoured-card-header">
+         Devoured burgers
+        </div>
+        <!--When a burger has been devoured, put burger here-->
+        <div class="card card-body">
+          {{#each burgers}}
+              {{#if devoured}}
+                {{> burgers/burger-devoured devour=true}}
+              {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <div class="card footer">
+        <div class="card-body footer-body text-white">
+          <h5 class="card-title text-white">BURGER EMPIRE</h5>
+          
+          <a href="" class="btn  mr-2" target="_blank">GitHub</a>
+          <a href="" class="btn " target="_blank">LinkedIn</a>
+          <br>
+          <br>
+          <small></small>
+        </div>
+      </div>
+    </div>
+</div>
+
+

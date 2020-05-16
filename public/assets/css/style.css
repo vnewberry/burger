@@ -1,0 +1,44 @@
+.card-header {
+  background-color: #da291c;
+}
+.jumbotron {
+  background-color: #ffc72c;
+}
+.card {
+  background-color: #ffc72c;
+}
+.border {
+  background-color: #ffc72c;
+}
+.devoured-burger-name {
+  color: #da291c;
+}
+.btn {
+  background-color: #27251f;
+  color: #ffc72c;
+}
+#burger-title{
+    color: #da291c;
+}
+body {
+  font-family: "McLawsuit", cursive;
+}
+
+#app-title {
+  font-size: 55px;
+  color: #da291c;
+}
+
+
+
+.footer-body {
+  background-color: #da291c;
+  color: #ffc72c;
+}
+
+.devoured-card,
+.footer {
+  border-style: solid;
+
+  color: #ffc72c;
+}

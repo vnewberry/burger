@@ -2,7 +2,6 @@ var express = require("express");
 
 var router = express.Router();
 
-
 var burger = require("../models/burger.js");
 //main route
 router.get("/", function (req, res) {
@@ -32,12 +31,11 @@ router.put("/api/burgers/:id", function (req, res) {
 
   burger.update(
     {
-      devoured: req.body.devoured,
+      devoured: true,
     },
     condition,
     function (result) {
       if (result.changedRows == 0) {
-       
         return res.status(404).end();
       } else {
         res.status(200).end();
@@ -52,13 +50,11 @@ router.delete("/api/burgers/:id", function (req, res) {
 
   burger.delete(condition, function (result) {
     if (result.affectedRows == 0) {
-     
       return res.status(404).end();
     } else {
       res.status(200).end();
     }
   });
 });
-
 
 module.exports = router;
